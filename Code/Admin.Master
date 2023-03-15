@@ -1,0 +1,93 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="FYPSystem.Code.Admin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+
+        .navcontainer{
+            width:150px;
+            height:100%;
+            background-color:white;
+
+             padding-left:0px;
+             margin-left:-30px;
+               position: fixed;
+               padding-top:40px;
+               text-align:center;
+               border-right:double;
+               
+               border-color:darkblue;
+               border-right-width: 10px;
+        }
+          .navcontainer ul{
+            float:right;
+
+        }
+        .navcontainer ul li{
+            display: inline-block;
+            list-style:none;
+        }
+        .navcontainer ul li a{
+            color:dimgray;
+            text-decoration:none;
+            font-size:12px;
+
+        }
+            .navcontainer ul li img{
+           height:50px;
+           width:50px;
+            text-decoration:none;
+
+        }
+       .navcontainer ul li a:hover{
+            color:red;
+        }
+       .navcontainer ul li .active{
+                 color:white;
+        }
+        .contentcontainer{
+           box-sizing: border-box;
+
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+               <div class="navcontainer">
+                    <ul>
+                    <li><a href="AdminHome.aspx">
+                        <img src="../image/dashboardZ.png" /><br />Dashboard</a><br /></li>
+                   
+                    <li><a href="PredictiveModel.aspx">
+                        <img src="../image/calenderg.png" /><br />Predictive Model</a><br /></li>
+
+                    <li><a href="AdminAppointment.aspx">
+                        <img src="../image/calenderg.png" /><br />Appointment</a><br /></li>
+                    <li><a href="AdminTherapy.aspx">
+                        <img src="../image/therapyg.png" /><br />Update Therapy</a><br /></li>
+                    <li><a href="AdminEvent.aspx">
+                        <img src="../image/Eventg.png" /><br />Update Event</a><br /><br /></li>
+                    <li><a href="AdminFAQM.aspx">
+                        <img src="../image/faqg.png" /><br />Update FAQ</a><br /></li>
+                    <li><a href="AdminProfile.aspx">
+                        <img src="../image/portfoliog.png" /><br />Profile</a></li>
+                   
+                    </ul>
+               </div>
+    
+
+            <div class="contentcontainer">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+            </asp:ContentPlaceHolder>
+                </div>
+        </div>
+    </form>
+</body>
+</html>
